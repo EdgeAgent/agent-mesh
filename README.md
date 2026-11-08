@@ -54,6 +54,17 @@ flowchart LR
 
 You need Node 18+ and OpenSSL (used for certificate issuance).
 
+**One install (recommended)** — one script downloads the engine, registers it with Chrome, and enrolls this machine:
+
+```sh
+# Windows (PowerShell)
+irm https://raw.githubusercontent.com/EdgeAgent/agent-mesh/main/install-mesh.ps1 | iex
+# macOS / Linux
+curl -fsSL https://raw.githubusercontent.com/EdgeAgent/agent-mesh/main/install-mesh.sh | sh
+```
+
+Then start the node with `node daemon.mjs serve` from the install folder and open Conductor's Mesh tab. Manual setup below does the same steps by hand.
+
 **Machine 1 — create the mesh and start the node:**
 
 ```sh
